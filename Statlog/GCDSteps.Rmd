@@ -81,11 +81,13 @@ mapping <- c('A11'  =  '... < 0 DM',
              'A201'  =  'yes',
              'A202'  =  'no')
 
-for(ci in colnames(d)) {
-  if(is.character(d[[ci]])) {
-    d[[ci]] <- as.factor(mapping[d[[ci]]])
-  }
-}
+d$Purpose = as.factor(mapping[d[['Purpose']]])
+
+# for(ci in colnames(d)) {
+#  if(is.character(d[[ci]])) {
+#    d[[ci]] <- as.factor(mapping[d[[ci]]])
+#  }
+#}
 
 
 
